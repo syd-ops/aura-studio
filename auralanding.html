@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Studio</title>
+    <style>
+        /* -------- Global Styles -------- */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }
+    
+        body {
+          color: #222;
+          background-color: #fafafa;
+          line-height: 1.6;
+          scroll-behavior: smooth;
+        }
+    
+        section {
+          padding: 80px 10%;
+        }
+    
+        h1, h2 {
+          font-weight: 600;
+          text-align: center;
+          color: #222;
+        }
+    
+        p {
+          max-width: 700px;
+          margin: 10px auto;
+          text-align: center;
+          color: #555;
+        }
+    
+        /* -------- Hero Section -------- */
+        .hero {
+          height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background: linear-gradient(135deg, #6C63FF, #FF6F61);
+          color: white;
+          text-align: center;
+        }
+    
+        .hero h1 {
+          font-size: 3rem;
+          letter-spacing: 1px;
+        }
+    
+        .tagline {
+          font-size: 1.3rem;
+          margin-top: 10px;
+          opacity: 0.95;
+          animation: fadeIn 2s ease-in-out;
+        }
+    
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+    
+        /* -------- About Section -------- */
+        #about {
+          background-color: #ffffff;
+        }
+    
+        /* -------- Services Section -------- */
+        #services {
+          background: linear-gradient(135deg, #fdfbfb, #ebedee);
+        }
+    
+        .services {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          margin-top: 50px;
+        }
+    
+        .service {
+          background: white;
+          padding: 30px;
+          border-radius: 15px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+          text-align: center;
+          border-top: 5px solid transparent;
+        }
+    
+        .service:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 8px 25px rgba(108, 99, 255, 0.2);
+          border-top: 5px solid #6C63FF;
+        }
+    
+        .service h3 {
+          color: #6C63FF;
+          margin-bottom: 10px;
+        }
+    
+        /* -------- Contact Section -------- */
+        #contact {
+          background: linear-gradient(135deg, #FF6F61, #ff9a8b);
+          color: white;
+        }
+    
+        form {
+          max-width: 500px;
+          margin: 40px auto 0;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+    
+        input, textarea {
+          padding: 12px;
+          border: none;
+          border-radius: 5px;
+          font-size: 1rem;
+          resize: none;
+        }
+    
+        input::placeholder, textarea::placeholder {
+          color: #888;
+        }
+    
+        button {
+          background: #6C63FF;
+          color: #fff;
+          padding: 12px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background 0.3s ease, transform 0.2s ease;
+        }
+    
+        button:hover {
+          background: #554ae2;
+          transform: translateY(-2px);
+        }
+    
+        /* -------- Back to Top Button -------- */
+        #backToTop {
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          background: #6C63FF;
+          color: #fff;
+          border: none;
+          border-radius: 50%;
+          width: 45px;
+          height: 45px;
+          font-size: 1.2rem;
+          cursor: pointer;
+          display: none;
+          box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+          transition: background 0.3s ease;
+        }
+    
+        #backToTop:hover {
+          background: #554ae2;
+        }
+    
+        footer {
+          text-align: center;
+          padding: 20px;
+          color: #777;
+          font-size: 0.9rem;
+          background: #ffffff;
+        }
+    
+        @media (max-width: 768px) {
+          .hero h1 {
+            font-size: 2.3rem;
+          }
+          section {
+            padding: 60px 8%;
+          }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Aura Studio</h1>
+        <p class="tagline">Brnging ideas to life</p>
+    </section>
+
+    <section id="about">
+        <h2>About us</h2>
+        <p>
+            Aura Studio is a London-based creative agency that helps brands express their identity through
+            mordern, minimalst design. we focus on clean asthetics, strong visuals, and storytelling through designs.
+        </p>
+    </section>
+
+    <section id="services">
+        <h2>Our services</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Branding</h3>
+                <p>We craft unique brand identities that communicate purpose and style</p>
+            </div>
+            <div class="service">
+                <h3>UI/UX Design</h3>
+                <p>We design intuitive interfaces and user experiences that engage audiences.</p>
+            </div>
+            <div class="service">
+                <h3>Web Design</h3>
+                <p>We create responsive, elegant websitesthat brings your story to life online</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have a project in mind? We’d love to hear from you.</p>
+        <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <button id="backToTop">&#8679;</button>
+
+  <footer>
+    © 2025 Aura Studio. All rights reserved.
+  </footer>
+
+  <script>
+    // Back to Top Button
+    const backToTop = document.getElementById("backToTop");
+    window.onscroll = () => {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTop.style.display = "block";
+      } else {
+        backToTop.style.display = "none";
+      }
+    };
+    backToTop.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  </script>
+</body>
+</html>
